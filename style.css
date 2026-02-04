@@ -1,65 +1,150 @@
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
-    background: #f5f7fa;
-    color: #333;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: #f4f6f9;
+    color: #1f2933;
+    line-height: 1.6;
+}
+
+/* HERO */
 .hero {
-    background: #1f2933;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
     color: white;
     text-align: center;
-    padding: 60px 20px;
+    padding: 90px 20px;
 }
 
 .hero h1 {
-    font-size: 40px;
+    font-size: 42px;
+    margin-bottom: 10px;
 }
 
 .hero h3 {
-    font-weight: normal;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.hero p {
+    opacity: 0.9;
+}
+
+.buttons {
+    margin-top: 25px;
 }
 
 .buttons a {
-    display: inline-block;
-    margin: 10px;
-    padding: 10px 18px;
-    background: #3b82f6;
-    color: white;
     text-decoration: none;
-    border-radius: 5px;
+    background: white;
+    color: #1e3c72;
+    padding: 12px 22px;
+    margin: 6px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
+.buttons a:hover {
+    background: #e6eaf0;
+}
+
+/* SECTIONS */
 .section {
-    padding: 40px 10%;
+    padding: 60px 10%;
 }
 
 .gray {
     background: #eef2f7;
 }
 
-h2 {
-    color: #1f2933;
-    margin-bottom: 20px;
+.section h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    position: relative;
 }
 
+.section h2::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: #2a5298;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+}
+
+/* GRID */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
 }
 
+/* CARDS */
 .card {
     background: white;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+    margin-bottom: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card h3,
+.card h4 {
+    color: #2a5298;
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin-bottom: 8px;
+}
+
+/* LISTS */
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+/* LINKS */
+a {
+    color: #2a5298;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
 footer {
     background: #1f2933;
     color: white;
     text-align: center;
-    padding: 15px;
+    padding: 18px;
+    margin-top: 40px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .section {
+        padding: 45px 6%;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
 }
